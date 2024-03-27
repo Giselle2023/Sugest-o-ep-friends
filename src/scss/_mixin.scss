@@ -1,0 +1,9 @@
+@mixin display($value){
+    display: flex;
+    flex-direction: $value;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem;
+
+   
+}

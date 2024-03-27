@@ -1,0 +1,83 @@
+
+body{
+    @include display(column);
+    width: 100vw;
+    height: 100vh;
+    background: rgb(36, 95, 161);
+}
+.img{
+    img{
+        animation: animar 7s infinite;
+        width: 60px;
+        filter: drop-shadow(1px 2px)
+    }
+
+}
+.container{
+    @include display(column);
+    align-items: center;
+    justify-content: center;
+    width: 560px;
+    h1{
+        font-size: 20px;
+    }
+    span{
+       @include display(row);
+        gap: .4rem;
+        color: $text-color;
+        button{
+            cursor: pointer;
+            border: none;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background-color: transparent;
+            border: 2px solid $yellow;
+            color: $yellow;
+            font-size: 8px;
+            transition: .6s;
+            &:hover{
+                background-color:$yellow;
+                color: white;
+                
+
+            }
+        }
+    }
+}
+
+.container-resultado{
+    @include display(column);
+    h4{
+        color: $text-color;
+        padding:.8rem .5rem;
+        text-align: center;
+        font-weight: 600;
+        font-size: 15px;
+        
+    }
+    p{
+        font-size: 12px;
+    }
+
+}
+
+.resumo{
+    box-shadow: inset 2px 1px 3px rgba(0, 0, 0, 0.733);
+    padding: 1.4rem;
+    border-radius: 20px;
+    background-color: $text-color
+}
+
+@keyframes animar{
+    0%{
+        transform: rotate(3deg);
+    }
+    50%{
+        transform: rotate(-3deg);
+    }
+    100%{
+        transform: rotate(3deg);
+
+    }
+}
